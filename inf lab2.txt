@@ -1,0 +1,76 @@
+int_num = 12
+float_num = 12.0
+bool_log = True
+str_text = "text"
+###########################
+name = "Nikita"
+age = 18
+print(name,age)
+###########################
+num1 = 342
+num2 = 56.2
+num3 = 43
+num_sum = num1 + num2 + num3
+print(num_sum)
+###########################
+a = 3
+b = 8
+print((a+4*b)*(a-3*b) + a**2)
+###########################
+def getsq():
+    a = input("Первая сторона ")
+    b = input("Вторая сторона ")
+    a = int(a)
+    b = int(b)
+    #print("Периметр прямоугольника:",(a+b)*2)
+   #print("Площадь прямоугольника:",a*b)
+getsq()
+###########################
+print("*   *   * \n"
+      " * * * * \n"
+      "  *   *")
+###########################
+number1 = 12
+number2 = 2
+chars = ['+','-','*','**','/','//','%']
+chars_bool = ['>','<','>=','<=','!=','==']
+for i in chars:
+    print(eval(str(number1) + i + str(number2)))
+for j in chars_bool:
+    print(eval(str(number1) + j + str(number2)))
+###########################
+my_name = "Nikita"
+my_age = 18
+#print(f"Меня зовут {my_name}, мне {my_age} лет.")
+###########################
+sentense = "Съешь ещё этих мягких французских булок, да выпей чаю"
+words = sentense.split(" ")
+big_word = ''
+for i in words:
+    big_word += i + ' '
+print(big_word)
+###########################
+print("Нет! Да! "*4)
+###########################
+get_num1 = 0
+get_num2 = 0
+get_num3 = 0
+get_nums = input("Введите 3 числа через запятую ")
+get_nums = get_nums.split(', ')
+
+get_num1 = int(get_nums[0])
+get_num2 = int(get_nums[1])
+get_num3 = int(get_nums[2])
+
+print((get_num1 + get_num3) / get_num2)
+###########################
+get_word = input("Введите слово (не менее 10 символов) ")
+
+if len(get_word) >= 10:
+    print(get_word[:4])
+    print(get_word[-2:])
+    print(get_word[4:8])
+    print(get_word[::-1])
+
+else: print("Недостаточно символов")
+
