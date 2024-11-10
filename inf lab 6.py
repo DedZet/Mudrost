@@ -17,82 +17,102 @@
 
 #2####################################################
 
-# def calculate_profit(deposit, years):
+# def calculate_profit(deposit, y):
 #     if deposit < 30000:
-#         print("Минимальный вклад составляет 30 000 рублей.")
+#         print("Минимальный вклад составляет 30 000 рублей")
+#     profit = 0
 
-#     if years <= 3:
-#         interest_rate = 0.03
-#     elif 4 <= years <= 6:
-#         interest_rate = 0.05
-#     else:
-#         interest_rate = 0.02
+#     if y <= 3: 
+#         rate = 0.03
+#         profit_add = min((deposit // 10000) * 0.003, 0.05) + rate
+#     elif y >= 4 and y < 6: 
+#         rate = 0.05
+#         profit_add = min((deposit // 10000) * 0.003, 0.05) + rate + 0.03 
+#     elif y > 6: 
+#         rate = 0.02
+#         profit_add = min((deposit // 10000) * 0.003, 0.05) + rate + 0.03 + 0.05
 
-#     additional_interest = min((deposit // 10000) * 0.003, 0.05)
-    
-#     total_interest_rate = interest_rate + additional_interest
-
-#     final_amount = deposit * ((1 + total_interest_rate) ** years)
-
-#     profit = final_amount - deposit
+#     profit = (deposit * ((1 + profit_add) ** y)) - deposit
 
 #     return round(profit, 2)
 
-# deposit_amount = float(input("Введите сумму вклада (в рублях): "))
-# investment_years = int(input("Введите срок вклада (в годах): "))
-# profit = calculate_profit(deposit_amount, investment_years)
-
-# print(f"Сумма прибыли составит: {profit} рублей.")
+# deposit_amount = float(input("Введите сумму вклада: "))
+# investment_years = int(input("Введите срок вклада: "))
+# print(calculate_profit(deposit_amount, investment_years))
 
 #3#################################################
 
-u = input('Введите число ')
+# u = input('Введите диапазон ')
+# nums_inp = u.split()
+# num1 = int(nums_inp[0])
+# num2 = int(nums_inp[1])
+# s = []
 
-nums = u.split()
+# print(num1, num2)
 
-num1 = int(nums[0])
-num2 = int(nums[1])
+# def is_prime(n):
+#     if n < 2:
+#         return False
+#     for i in range(2, int(n**0.5) + 1):
+#         if n % i == 0:
+#             return False
+#     return True
 
-print(num1, num2)
-def is_prime(p):
-    for x in range(num1, num2 - 1): 
-        if (p % x == 0): 
-            print(x)
+# for x in range(num1, num2 - 1):
+#     if is_prime(x): s.append(x)
 
-is_prime(num1)
+# if len(s) != 0: print(s)
+# else: print('Error!')
 
 #4#################################################
+# i = j = 0
+# inp_scale = int(input("Введите размер матрицы: "))
+# print('')
+# class MatrixA:
+#     scale = 2
+#     slot = [][:scale]
+#     rows = [][:scale]
 
-# def input_matrix(size):
-#     matrix = []
-#     for _ in range(size):        
-#         row = list(map(int, input().strip().split()))
-#         matrix.append(row)    
-#         return matrix
+# class MatrixB:
+#     scale = 2
+#     slot = [][:scale]
+#     rows = [][:scale]
+    
+# a = c = MatrixA()
+# b = MatrixB()
 
-# def add_matrices(matrix1, matrix2):
-#     if len(matrix1) != len(matrix2) or len(matrix1[0]) != len(matrix2[0]):        
-#         raise ValueError("Матрицы должны быть одинакового размера!")
-#     result = []
-#     for i in range(len(matrix1)):        
-#         row = []
-#         for j in range(len(matrix1[i])):            
-#             row.append(matrix1[i][j] + matrix2[i][j])
-#         result.append(row)
-#     return result
+# while i < inp_scale:
+#     inp_slot_a = (input(f"Введите {i+1}-ю строку матрицы A: ")).split()[:inp_scale]
+#     inp_slot_a = list(map(lambda x: int(x), inp_slot_a))
+#     a.rows.append(inp_slot_a)
+#     i += 1
+# print('')
+# while j < inp_scale:
+#     inp_slot_b = (input(f"Введите {i+1}-ю строку матрицы B: ")).split()[:inp_scale]
+#     inp_slot_b = list(map(lambda x: int(x), inp_slot_b))
+#     b.rows.append(inp_slot_b)
+#     j += 1
 
-# def main():    
-#     size = int(input("Введите размер матриц (N): "))
-#     print("Введите элементы первой матрицы:")
-#     matrix1 = input_matrix(size)
-#     print("Введите элементы второй матрицы:")    
-#     matrix2 = input_matrix(size)
-#     result_matrix = add_matrices(matrix1, matrix2)
-#     print("Результат сложения двух матриц:")
-#     for row in result_matrix:        
-#         print(' '.join(map(str, row)))
+# print('')
+# print("Matrix A:",a.rows)
+# print("Matrix B:",b.rows)
+# print('')
 
-# main()
+# for i in range(len(a.rows)):
+#     for j in range(len(b.rows)):
+#      c.rows[i][j] = a.rows[i][j] + b.rows[i][j]
+
+# print("Matrix C:", c.rows)
 
 #5#################################################
 
+# str_inp = input("Введите строку: ")
+# def palindrome(x):
+    
+#     u = ''.join(x.split()).lower()
+
+#     if u[0:len(x)] == u[::-1]:
+#         print('Да')
+#     else: print('Нет')
+
+# palindrome(str_inp)
