@@ -1,0 +1,46 @@
+from random import randint
+
+SPECIALS = ["Учёный", "Инженер", "Лидер"]
+
+################################################################
+
+class Enemy:
+    hp = randint(4,9)
+    defence = randint(1,4)
+    attack = randint(4,9)
+    def hit(self,player_attack):
+        if randint(0,11) <= 5: self.hp -= player_attack
+        else: self.hp = self.hp + self.defence - player_attack
+
+class Human:
+    def __init__(self):
+        self.chars = {"Наука": randint(1, 5), "Инженерия": randint(1, 5), "Лидерство": randint(1, 5)}
+    name = 'Default'
+    main_char = 'Default'
+    char_attack = randint(1, 9)
+    char_defence = randint(1, 9)
+    char_hp = randint(1, 9)
+    def info(self, isplayer):
+        if isplayer: print(f"Ваши характеристики:\n- Имя: {self.name}\n- Наука: {self.chars.get('Наука')}\n- Инженерия: {self.chars.get('Инженерия')}\n- Лидерство: {self.chars.get('Лидерство')}\n")
+        else: print(f"- {self.name}\n- Наука: {self.chars.get('Наука')}\n- Инженерия: {self.chars.get('Инженерия')}\n- Лидерство: {self.chars.get('Лидерство')}\n")
+
+################################################################
+
+player = Human()
+player.name = input("Введите своё имя\n> ")
+player.main_char = SPECIALS[int(input("Введите специализацию:\n1. Учёный \n2. Инженер\n3. Лидер\n> "))-1]
+player.info(True)
+
+print('Команда: ')
+doctor = Human()
+doctor.name = "Доктор Гастрит (учёный)"
+doctor.info(False)
+
+soldat = Human()
+soldat.name = "Сержант Блейк (солдат)"
+soldat.info(False)
+
+techno = Human()
+techno.name = "Паша Техник (инженер)"
+techno.info(False)
+
