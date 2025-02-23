@@ -1,0 +1,62 @@
+# Blender 4.2.1 LTS MTL File: 'girik.blend'
+# www.blender.org
+
+newmtl M_Base
+Ns 480.739014
+Ka 0.540785 0.540785 0.540785
+Kd 1.000000 0.900307 0.000000
+Ks 0.258308 0.258308 0.258308
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+
+newmtl M_Brb
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd Lab/boss.png
+map_d Lab/alpha_brb.png
+
+newmtl M_Lights
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd Lab/lamp.png
+map_Ke Lab/lamp.png
+
+newmtl M_Shina
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd Lab/merc.png
+
+newmtl M_Spinner
+Ns 1000.000000
+Ka 0.722054 0.722054 0.722054
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 3
+map_Kd Lab/spin.png
+map_d Lab/alpha.png
+
+newmtl M_Wool
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Lab/top.png
